@@ -1,0 +1,4 @@
+E:\Code\Try\Vilin\Vilin\Common\Vilin.Utilities\bin\Debug\Vilin.Utilities.dll
+E:\Code\Try\Vilin\Vilin\Common\Vilin.Utilities\bin\Debug\Vilin.Utilities.pdb
+E:\Code\Try\Vilin\Vilin\Common\Vilin.Utilities\obj\Debug\Vilin.Utilities.dll
+E:\Code\Try\Vilin\Vilin\Common\Vilin.Utilities\obj\Debug\Vilin.Utilities.pdb

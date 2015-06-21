@@ -1,0 +1,7 @@
+E:\Code\Try\Vilin\Vilin\Vilin.UtilitiesTest\obj\Debug\Vilin.UtilitiesTest.csprojResolveAssemblyReference.cache
+E:\Code\Try\Vilin\Vilin\Vilin.UtilitiesTest\bin\Debug\Vilin.UtilitiesTest.dll
+E:\Code\Try\Vilin\Vilin\Vilin.UtilitiesTest\bin\Debug\Vilin.UtilitiesTest.pdb
+E:\Code\Try\Vilin\Vilin\Vilin.UtilitiesTest\bin\Debug\Vilin.Utilities.dll
+E:\Code\Try\Vilin\Vilin\Vilin.UtilitiesTest\bin\Debug\Vilin.Utilities.pdb
+E:\Code\Try\Vilin\Vilin\Vilin.UtilitiesTest\obj\Debug\Vilin.UtilitiesTest.dll
+E:\Code\Try\Vilin\Vilin\Vilin.UtilitiesTest\obj\Debug\Vilin.UtilitiesTest.pdb

@@ -1,0 +1,11 @@
+E:\Code\Try\Vilin\Vilin\UI\Vilin.Console\bin\Debug\Vilin.Console.exe
+E:\Code\Try\Vilin\Vilin\UI\Vilin.Console\bin\Debug\Vilin.Console.pdb
+E:\Code\Try\Vilin\Vilin\UI\Vilin.Console\bin\Debug\Vilin.Common.dll
+E:\Code\Try\Vilin\Vilin\UI\Vilin.Console\bin\Debug\log4net.dll
+E:\Code\Try\Vilin\Vilin\UI\Vilin.Console\bin\Debug\NPOI.dll
+E:\Code\Try\Vilin\Vilin\UI\Vilin.Console\bin\Debug\ICSharpCode.SharpZipLib.dll
+E:\Code\Try\Vilin\Vilin\UI\Vilin.Console\bin\Debug\Vilin.Common.pdb
+E:\Code\Try\Vilin\Vilin\UI\Vilin.Console\bin\Debug\log4net.xml
+E:\Code\Try\Vilin\Vilin\UI\Vilin.Console\bin\Debug\NPOI.xml
+E:\Code\Try\Vilin\Vilin\UI\Vilin.Console\obj\Debug\Vilin.Console.exe
+E:\Code\Try\Vilin\Vilin\UI\Vilin.Console\obj\Debug\Vilin.Console.pdb

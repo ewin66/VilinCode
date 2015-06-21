@@ -1,0 +1,9 @@
+E:\Code\Try\Vilin\Vilin\Services\Vilin.Models\bin\Debug\Vilin.Models.dll
+E:\Code\Try\Vilin\Vilin\Services\Vilin.Models\bin\Debug\Vilin.Models.pdb
+E:\Code\Try\Vilin\Vilin\Services\Vilin.Models\obj\Debug\Vilin.Models.dll
+E:\Code\Try\Vilin\Vilin\Services\Vilin.Models\obj\Debug\Vilin.Models.pdb
+E:\Code\Try\Vilin\Services\Vilin.Models\bin\Debug\Vilin.Models.dll
+E:\Code\Try\Vilin\Services\Vilin.Models\bin\Debug\Vilin.Models.pdb
+E:\Code\Try\Vilin\Services\Vilin.Models\obj\Debug\Vilin.Models.csprojResolveAssemblyReference.cache
+E:\Code\Try\Vilin\Services\Vilin.Models\obj\Debug\Vilin.Models.dll
+E:\Code\Try\Vilin\Services\Vilin.Models\obj\Debug\Vilin.Models.pdb
