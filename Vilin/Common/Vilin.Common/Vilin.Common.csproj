@@ -9,8 +9,9 @@
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>Vilin.Common</RootNamespace>
     <AssemblyName>Vilin.Common</AssemblyName>
-    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -20,6 +21,7 @@
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>pdbonly</DebugType>
@@ -28,6 +30,7 @@
     <DefineConstants>TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="ICSharpCode.SharpZipLib, Version=0.86.0.518, Culture=neutral, PublicKeyToken=1b03e6acf1164f73, processorArchitecture=MSIL">
@@ -40,6 +43,30 @@
     </Reference>
     <Reference Include="log4net, Version=1.2.13.0, Culture=neutral, PublicKeyToken=669e0ddf0bb1aa2a, processorArchitecture=MSIL">
       <HintPath>..\..\packages\log4net.2.0.3\lib\net40-full\log4net.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.Practices.Unity, Version=3.5.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Unity.3.5.1405-prerelease\lib\net45\Microsoft.Practices.Unity.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.Practices.Unity.Configuration, Version=3.5.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Unity.3.5.1405-prerelease\lib\net45\Microsoft.Practices.Unity.Configuration.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.Practices.Unity.Interception, Version=3.5.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Unity.Interception.3.5.1405-prerelease\lib\Net45\Microsoft.Practices.Unity.Interception.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.Practices.Unity.Interception.Configuration, Version=3.5.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Unity.Interception.3.5.1405-prerelease\lib\Net45\Microsoft.Practices.Unity.Interception.Configuration.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.Practices.Unity.RegistrationByConvention, Version=3.5.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Unity.3.5.1405-prerelease\lib\net45\Microsoft.Practices.Unity.RegistrationByConvention.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="NHibernate, Version=4.0.0.4000, Culture=neutral, PublicKeyToken=aa95f207798dfdb4, processorArchitecture=MSIL">
@@ -67,7 +94,32 @@
     <Reference Include="System.Core" />
     <Reference Include="System.Drawing" />
     <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Transactions" />
     <Reference Include="System.Web" />
+    <Reference Include="System.Web.Helpers, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.Helpers.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.Mvc, Version=5.2.3.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Microsoft.AspNet.Mvc.5.2.3\lib\net45\System.Web.Mvc.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Microsoft.AspNet.Razor.3.2.3\lib\net45\System.Web.Razor.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.WebPages, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.WebPages.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Deployment, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.WebPages.Deployment.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.WebPages.Razor.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -75,6 +127,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Atrribute\CachingCallHandlerAttribute.cs" />
+    <Compile Include="Atrribute\MyExceptionFilterAttribute.cs" />
+    <Compile Include="Atrribute\TransactionCallHandlerAttribute.cs" />
     <Compile Include="Compression\SharpZipLib\BZip2\BZip2.cs" />
     <Compile Include="Compression\SharpZipLib\BZip2\BZip2Constants.cs" />
     <Compile Include="Compression\SharpZipLib\BZip2\BZip2Exception.cs" />
@@ -145,12 +200,17 @@
     <Compile Include="Email\Settings.cs" />
     <Compile Include="Enum\EnumHelper.cs" />
     <Compile Include="Guid\GuidHelper.cs" />
+    <Compile Include="Handler\CachingCallHandler.cs" />
+    <Compile Include="Handler\LoggingInterceptionBehavior.cs" />
+    <Compile Include="Handler\PerformanceInterceptionBehavior.cs" />
+    <Compile Include="Handler\TransactionCallHandler.cs" />
     <Compile Include="IdGenerator\IDGenerateHelper.cs" />
     <Compile Include="IocContainer\IIoc.cs" />
     <Compile Include="IocContainer\Ioc.cs" />
     <Compile Include="IocContainer\IocMemory.cs" />
     <Compile Include="IO\FileHelper.cs" />
-    <Compile Include="JAtrribute\NameAttribute.cs" />
+    <Compile Include="Atrribute\MyActionFilterAttribute.cs" />
+    <Compile Include="Atrribute\NameAttribute.cs" />
     <Compile Include="JConfig\ConfigHelper.cs" />
     <Compile Include="JEncodeFunc\EncodeAndDecodeHelper.cs" />
     <Compile Include="JEnum\EnumHelper.cs" />
@@ -164,7 +224,7 @@
     <Compile Include="JValidator\EqualHelper.cs" />
     <Compile Include="JValidator\HttpSQLChecker.cs" />
     <Compile Include="JValidator\ValidateHelper.cs" />
-    <Compile Include="Log\Log4netBase.cs" />
+    <Compile Include="Log\Log4net.cs" />
     <Compile Include="MsSql\DataAccessException.cs" />
     <Compile Include="MsSql\EntityDAO.cs" />
     <Compile Include="MsSql\IEntityDAO.cs" />
@@ -187,7 +247,13 @@
     <Compile Include="StringFunction\StringFunction.cs" />
     <Compile Include="StringFunc\MoneyConvert.cs" />
     <Compile Include="StringFunc\StringConvertor.cs" />
+    <Compile Include="ThreadQueue\BaseThreadQueueModel.cs" />
+    <Compile Include="ThreadQueue\OrderModel.cs" />
+    <Compile Include="ThreadQueue\ThreadQueueContainer.cs" />
+    <Compile Include="ThreadQueue\ThreadQueueCore.cs" />
     <Compile Include="TimeFunc\DateTimeConvertor.cs" />
+    <Compile Include="Xml\XMLContainer.cs" />
+    <Compile Include="Xml\XMLHelper.cs" />
     <Compile Include="Xml\XmlHerlper.cs" />
   </ItemGroup>
   <ItemGroup>

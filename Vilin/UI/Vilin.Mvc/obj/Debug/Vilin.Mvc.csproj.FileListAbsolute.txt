@@ -104,3 +104,4 @@ E:\Code\Try\Vilin\UI\Vilin.Mvc\bin\zh-Hans\System.Web.WebPages.Razor.resources.d
 E:\Code\Try\Vilin\UI\Vilin.Mvc\obj\Debug\Vilin.Mvc.csprojResolveAssemblyReference.cache
 E:\Code\Try\Vilin\UI\Vilin.Mvc\obj\Debug\Vilin.Mvc.dll
 E:\Code\Try\Vilin\UI\Vilin.Mvc\obj\Debug\Vilin.Mvc.pdb
+E:\Code\Try\VilinCode\Vilin\UI\Vilin.Mvc\obj\Debug\Vilin.Mvc.csprojResolveAssemblyReference.cache

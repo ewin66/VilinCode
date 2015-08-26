@@ -22,3 +22,15 @@ E:\Code\Try\Vilin\Services\Vilin.Data\bin\Debug\EntityFramework.SqlServer.xml
 E:\Code\Try\Vilin\Services\Vilin.Data\obj\Debug\Vilin.Data.csprojResolveAssemblyReference.cache
 E:\Code\Try\Vilin\Services\Vilin.Data\obj\Debug\Vilin.Data.dll
 E:\Code\Try\Vilin\Services\Vilin.Data\obj\Debug\Vilin.Data.pdb
+E:\Code\Try\VilinCode\Vilin\Services\Vilin.Data\bin\Debug\Vilin.Data.dll.config
+E:\Code\Try\VilinCode\Vilin\Services\Vilin.Data\bin\Debug\Vilin.Data.dll
+E:\Code\Try\VilinCode\Vilin\Services\Vilin.Data\bin\Debug\Vilin.Data.pdb
+E:\Code\Try\VilinCode\Vilin\Services\Vilin.Data\bin\Debug\EntityFramework.dll
+E:\Code\Try\VilinCode\Vilin\Services\Vilin.Data\bin\Debug\EntityFramework.SqlServer.dll
+E:\Code\Try\VilinCode\Vilin\Services\Vilin.Data\bin\Debug\Vilin.Models.dll
+E:\Code\Try\VilinCode\Vilin\Services\Vilin.Data\bin\Debug\Vilin.Models.pdb
+E:\Code\Try\VilinCode\Vilin\Services\Vilin.Data\bin\Debug\EntityFramework.xml
+E:\Code\Try\VilinCode\Vilin\Services\Vilin.Data\bin\Debug\EntityFramework.SqlServer.xml
+E:\Code\Try\VilinCode\Vilin\Services\Vilin.Data\obj\Debug\Vilin.Data.csprojResolveAssemblyReference.cache
+E:\Code\Try\VilinCode\Vilin\Services\Vilin.Data\obj\Debug\Vilin.Data.dll
+E:\Code\Try\VilinCode\Vilin\Services\Vilin.Data\obj\Debug\Vilin.Data.pdb

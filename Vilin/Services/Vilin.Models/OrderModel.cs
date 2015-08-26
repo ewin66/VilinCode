@@ -7,8 +7,10 @@ namespace Vilin.Models
 {
     public class OrderModel : EntityBase<int>
     {
-        public string OrderCode { get; set; }
+        public virtual string OrderCode { get; set; }
 
-        public string ProductCode { get; set; }
+        public virtual string ProductCode { get; set; }
+
+        public virtual ProductModel Product { get; set; }
     }
 }

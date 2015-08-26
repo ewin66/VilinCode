@@ -7,10 +7,12 @@ namespace Vilin.Models
 {
     public class ProductModel : EntityBase<int>
     {
-        public string ProductCode { get; set; }
+        public virtual string ProductCode { get; set; }
 
-        public string ProductName { get; set; }
+        public virtual string ProductName { get; set; }
 
-        public int Count { get; set; }
+        public virtual int Count { get; set; }
+
+        public virtual List<OrderModel> Orders { get; set; }
     }
 }
