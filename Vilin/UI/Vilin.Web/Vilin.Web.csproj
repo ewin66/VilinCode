@@ -13,14 +13,12 @@
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>Vilin.Web</RootNamespace>
     <AssemblyName>Vilin.Web</AssemblyName>
-    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <UseIISExpress>true</UseIISExpress>
     <IISExpressSSLPort />
     <IISExpressAnonymousAuthentication />
     <IISExpressWindowsAuthentication />
     <IISExpressUseClassicPipelineMode />
-    <TargetFrameworkProfile />
-    <UseGlobalApplicationHostFile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -30,7 +28,6 @@
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
-    <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>pdbonly</DebugType>
@@ -39,90 +36,44 @@
     <DefineConstants>TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
-    <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Microsoft.CSharp" />
-    <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
     <Reference Include="System.Web.ApplicationServices" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System" />
     <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Drawing" />
     <Reference Include="System.Web" />
     <Reference Include="System.Xml" />
     <Reference Include="System.Configuration" />
     <Reference Include="System.Web.Services" />
     <Reference Include="System.EnterpriseServices" />
-    <Reference Include="System.Xml.Linq" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="bin\Alachisoft.NCache.Cache.dll" />
-    <Content Include="bin\Alachisoft.NCache.Cluster.dll" />
-    <Content Include="bin\Alachisoft.NCache.Common.dll" />
-    <Content Include="bin\Alachisoft.NCache.Management.dll" />
-    <Content Include="bin\Alachisoft.NCache.Parser.dll" />
-    <Content Include="bin\Alachisoft.NCache.Runtime.dll" />
-    <Content Include="bin\Alachisoft.NCache.Serialization.dll" />
-    <Content Include="bin\Alachisoft.NCache.SessionStateManagement.dll" />
-    <Content Include="bin\Alachisoft.NCache.SessionStoreProvider.dll" />
-    <Content Include="bin\Alachisoft.NCache.SocketServer.dll" />
-    <Content Include="bin\Alachisoft.NCache.Storage.dll" />
-    <Content Include="bin\Alachisoft.NCache.Web.dll" />
-    <Content Include="bin\Microsoft.ApplicationServer.Caching.Client.dll" />
-    <Content Include="bin\Microsoft.ApplicationServer.Caching.Core.dll" />
-    <Content Include="bin\Microsoft.ApplicationServer.StoreProvider.dll" />
-    <Content Include="bin\Microsoft.WindowsFabric.Common.dll" />
-    <Content Include="bin\Microsoft.WindowsFabric.Data.Common.dll" />
-    <Content Include="Default.aspx" />
-    <Content Include="Global.asax" />
-    <Content Include="SessionCluster.aspx" />
-    <Content Include="ThreadQueue\SubmitOrder.aspx" />
-    <Content Include="Web.config">
-      <SubType>Designer</SubType>
-    </Content>
+    <Content Include="Web.config" />
+    <Content Include="WebForm1.aspx" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Default.aspx.cs">
-      <DependentUpon>Default.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Default.aspx.designer.cs">
-      <DependentUpon>Default.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Global.asax.cs">
-      <DependentUpon>Global.asax</DependentUpon>
-    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="SessionCluster.aspx.cs">
-      <DependentUpon>SessionCluster.aspx</DependentUpon>
+    <Compile Include="WebForm1.aspx.cs">
+      <DependentUpon>WebForm1.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="SessionCluster.aspx.designer.cs">
-      <DependentUpon>SessionCluster.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="ThreadQueue\SubmitOrder.aspx.cs">
-      <DependentUpon>SubmitOrder.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="ThreadQueue\SubmitOrder.aspx.designer.cs">
-      <DependentUpon>SubmitOrder.aspx</DependentUpon>
+    <Compile Include="WebForm1.aspx.designer.cs">
+      <DependentUpon>WebForm1.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
     <None Include="log4net.config">
       <SubType>Designer</SubType>
     </None>
-    <Content Include="Log\LogError\20150616" />
-    <Content Include="Log\LogError\20150731" />
-    <Content Include="Log\LogError\20150815" />
-    <Content Include="Log\LogInfo\20150616" />
-    <Content Include="Log\LogInfo\20150731" />
-    <Content Include="Log\LogInfo\20150815" />
-    <None Include="Properties\PublishProfiles\Vilin.pubxml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -135,9 +86,6 @@
       <Project>{71fbfa63-e733-4f03-ab79-fc92d5fac447}</Project>
       <Name>Vilin.Common</Name>
     </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
-    <Folder Include="config\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

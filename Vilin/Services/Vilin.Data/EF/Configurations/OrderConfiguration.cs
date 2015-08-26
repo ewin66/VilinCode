@@ -15,7 +15,6 @@ namespace Vilin.Data
             Property(d => d.Id).IsRequired();
             Property(d => d.OrderCode).HasMaxLength(20);
             Property(d => d.ProductCode).HasMaxLength(20);
-            //HasRequired(d => d.Product).WithMany(p => p.Orders).Map(c => { c.MapKey("ProductCodeFK");});
             Property(d => d.State);
             Property(d => d.CreateDate);
         }
