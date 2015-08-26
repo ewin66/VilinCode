@@ -2,8 +2,8 @@
 <DirectedGraph GraphDirection="LeftToRight" xmlns="http://schemas.microsoft.com/vs/2009/dgml">
   <Nodes>
     <Node Id="UI\Vilin.Mvc" Label="Vilin.Mvc" Category="项目" />
-    <Node Id="EntityFramework 5.0.0" Label="EntityFramework 5.0.0" Category="包" />
-    <Node Id="EntityFramework.zh-Hans 5.0.0" Label="EntityFramework.zh-Hans 5.0.0" Category="包" />
+    <Node Id="CommonServiceLocator 1.3" Label="CommonServiceLocator 1.3" Category="包" />
+    <Node Id="EntityFramework 6.1.3" Label="EntityFramework 6.1.3" Category="包" />
     <Node Id="jQuery 1.8.2" Label="jQuery 1.8.2" Category="包" />
     <Node Id="jQuery.UI.Combined 1.8.24" Label="jQuery.UI.Combined 1.8.24" Category="包" />
     <Node Id="jQuery.Validation 1.10.0" Label="jQuery.Validation 1.10.0" Category="包" />
@@ -34,10 +34,21 @@
     <Node Id="Microsoft.Web.Infrastructure 1.0.0.0" Label="Microsoft.Web.Infrastructure 1.0.0.0" Category="包" />
     <Node Id="Modernizr 2.6.2" Label="Modernizr 2.6.2" Category="包" />
     <Node Id="Newtonsoft.Json 4.5.11" Label="Newtonsoft.Json 4.5.11" Category="包" />
+    <Node Id="Unity 3.5.1405-prerelease" Label="Unity 3.5.1405-prerelease" Category="包" />
+    <Node Id="Unity.Mvc 3.5.1405-prerelease" Label="Unity.Mvc 3.5.1405-prerelease" Category="包" />
+    <Node Id="WebActivatorEx 2.0" Label="WebActivatorEx 2.0" Category="包" />
     <Node Id="WebGrease 1.3.0" Label="WebGrease 1.3.0" Category="包" />
+    <Node Id="Server\Data\Vilin.Data" Label="Vilin.Data" Category="项目" />
+    <Node Id="EntityFramework 6.1.3" Label="EntityFramework 6.1.3" Category="包" />
+    <Node Id="Common\Vilin.Common" Label="Vilin.Common" Category="项目" />
+    <Node Id="Iesi.Collections 4.0.0.4000" Label="Iesi.Collections 4.0.0.4000" Category="包" />
+    <Node Id="log4net 2.0.3" Label="log4net 2.0.3" Category="包" />
+    <Node Id="NHibernate 4.0.3.4000" Label="NHibernate 4.0.3.4000" Category="包" />
+    <Node Id="NPOI 2.1.3.1" Label="NPOI 2.1.3.1" Category="包" />
+    <Node Id="Unity 3.5.1405-prerelease" Label="Unity 3.5.1405-prerelease" Category="包" />
+    <Node Id="Unity.Interception 3.5.1405-prerelease" Label="Unity.Interception 3.5.1405-prerelease" Category="包" />
   </Nodes>
   <Links>
-    <Link Source="EntityFramework.zh-Hans 5.0.0" Target="EntityFramework 5.0.0" Category="程序包依赖项" />
     <Link Source="jQuery.UI.Combined 1.8.24" Target="jQuery 1.8.2" Category="程序包依赖项" />
     <Link Source="jQuery.Validation 1.10.0" Target="jQuery 1.8.2" Category="程序包依赖项" />
     <Link Source="Microsoft.AspNet.Mvc 4.0.20710.0" Target="Microsoft.AspNet.WebPages 2.0.20710.0" Category="程序包依赖项" />
@@ -65,7 +76,15 @@
     <Link Source="Microsoft.jQuery.Unobtrusive.Ajax 2.0.30116.0" Target="jQuery 1.8.2" Category="程序包依赖项" />
     <Link Source="Microsoft.jQuery.Unobtrusive.Validation 2.0.30116.0" Target="jQuery.Validation 1.10.0" Category="程序包依赖项" />
     <Link Source="Microsoft.Net.Http.zh-Hans 2.0.20710.0" Target="Microsoft.Net.Http 2.0.20710.0" Category="程序包依赖项" />
-    <Link Source="UI\Vilin.Mvc" Target="EntityFramework.zh-Hans 5.0.0" Category="安装的程序包" />
+    <Link Source="Unity 3.5.1405-prerelease" Target="CommonServiceLocator 1.3" Category="程序包依赖项" />
+    <Link Source="Unity 3.5.1405-prerelease" Target="CommonServiceLocator 1.3" Category="程序包依赖项" />
+    <Link Source="Unity 3.5.1405-prerelease" Target="CommonServiceLocator 1.3" Category="程序包依赖项" />
+    <Link Source="Unity.Mvc 3.5.1405-prerelease" Target="Unity 3.5.1405-prerelease" Category="程序包依赖项" />
+    <Link Source="Unity.Mvc 3.5.1405-prerelease" Target="WebActivatorEx 2.0" Category="程序包依赖项" />
+    <Link Source="Unity.Mvc 3.5.1405-prerelease" Target="CommonServiceLocator 1.3" Category="程序包依赖项" />
+    <Link Source="Unity.Mvc 3.5.1405-prerelease" Target="Microsoft.AspNet.Mvc 4.0.20710.0" Category="程序包依赖项" />
+    <Link Source="WebActivatorEx 2.0" Target="Microsoft.Web.Infrastructure 1.0.0.0" Category="程序包依赖项" />
+    <Link Source="UI\Vilin.Mvc" Target="EntityFramework 6.1.3" Category="安装的程序包" />
     <Link Source="UI\Vilin.Mvc" Target="jQuery.UI.Combined 1.8.24" Category="安装的程序包" />
     <Link Source="UI\Vilin.Mvc" Target="knockoutjs 2.2.0" Category="安装的程序包" />
     <Link Source="UI\Vilin.Mvc" Target="Microsoft.AspNet.Mvc.FixedDisplayModes 1.0.0" Category="安装的程序包" />
@@ -83,6 +102,14 @@
     <Link Source="UI\Vilin.Mvc" Target="Microsoft.jQuery.Unobtrusive.Validation 2.0.30116.0" Category="安装的程序包" />
     <Link Source="UI\Vilin.Mvc" Target="Microsoft.Net.Http.zh-Hans 2.0.20710.0" Category="安装的程序包" />
     <Link Source="UI\Vilin.Mvc" Target="Modernizr 2.6.2" Category="安装的程序包" />
+    <Link Source="UI\Vilin.Mvc" Target="Unity.Mvc 3.5.1405-prerelease" Category="安装的程序包" />
+    <Link Source="Server\Data\Vilin.Data" Target="EntityFramework 6.1.3" Category="安装的程序包" />
+    <Link Source="NHibernate 4.0.3.4000" Target="Iesi.Collections 4.0.0.4000" Category="程序包依赖项" />
+    <Link Source="Unity.Interception 3.5.1405-prerelease" Target="Unity 3.5.1405-prerelease" Category="程序包依赖项" />
+    <Link Source="Common\Vilin.Common" Target="log4net 2.0.3" Category="安装的程序包" />
+    <Link Source="Common\Vilin.Common" Target="NHibernate 4.0.3.4000" Category="安装的程序包" />
+    <Link Source="Common\Vilin.Common" Target="NPOI 2.1.3.1" Category="安装的程序包" />
+    <Link Source="Common\Vilin.Common" Target="Unity.Interception 3.5.1405-prerelease" Category="安装的程序包" />
   </Links>
   <Categories>
     <Category Id="项目" />

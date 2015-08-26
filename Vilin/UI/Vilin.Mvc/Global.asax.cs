@@ -1,5 +1,8 @@
-﻿using System;
+﻿using Microsoft.Practices.Unity;
+using Microsoft.Practices.Unity.Configuration;
+using System;
 using System.Collections.Generic;
+using System.Configuration;
 using System.Linq;
 using System.Web;
 using System.Web.Http;
@@ -25,6 +28,25 @@ namespace Vilin.Mvc
             BundleConfig.RegisterBundles(BundleTable.Bundles);
 
             DatabaseInitializer.Initialize();
+
+            //InitUnityContainer();
+        }
+
+        public void InitUnityContainer()
+        {
+            IUnityContainer container = new UnityContainer();
+            UnityConfigurationSection section = (UnityConfigurationSection)ConfigurationManager.GetSection("unity");
+            container.LoadConfiguration(section, "VilinContainer");
+
+            //IUnityContainer container = new UnityContainer();
+            //var fileMap = new ExeConfigurationFileMap ();
+            //fileMap.ExeConfigFilename = Server.MapPath("Unity.config");
+            //从config文件中读取配置信息
+            //Configuration configuration = ConfigurationManager.OpenMappedExeConfiguration(fileMap, ConfigurationUserLevel.None);
+            //获取指定名称的配置节
+            //UnityConfigurationSection section = (UnityConfigurationSection)ConfigurationManager.GetSection("unity");
+            //载入名称为FirstClass 的container节点
+            //container.LoadConfiguration(section, "VilinContainer");
         }
     }
 }

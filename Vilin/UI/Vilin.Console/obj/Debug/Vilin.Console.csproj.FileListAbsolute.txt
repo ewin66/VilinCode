@@ -9,3 +9,4 @@ E:\Code\Try\Vilin\Vilin\UI\Vilin.Console\bin\Debug\log4net.xml
 E:\Code\Try\Vilin\Vilin\UI\Vilin.Console\bin\Debug\NPOI.xml
 E:\Code\Try\Vilin\Vilin\UI\Vilin.Console\obj\Debug\Vilin.Console.exe
 E:\Code\Try\Vilin\Vilin\UI\Vilin.Console\obj\Debug\Vilin.Console.pdb
+E:\Code\Try\VilinCode\Vilin\UI\Vilin.Console\obj\Debug\Vilin.Console.csprojResolveAssemblyReference.cache

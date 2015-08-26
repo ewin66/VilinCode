@@ -1,0 +1,40 @@
+﻿<Controls:MetroWindow
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Vilin.AlarmClock"
+        xmlns:c="clr-namespace:Vilin.AlarmClock"
+        xmlns:Controls="clr-namespace:MahApps.Metro.Controls;assembly=MahApps.Metro"
+        xmlns:xctk="http://schemas.xceed.com/wpf/xaml/toolkit" x:Class="Vilin.AlarmClock.MainWindow"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="350" Width="525">
+    <Window.Resources>
+        <c:TimeZoneResources x:Key="TimeZoneCols"/>
+    </Window.Resources>
+    <Grid>
+        <TextBox x:Name="tbRemark" HorizontalAlignment="Left" Height="140" Margin="20,20,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="480" RenderTransformOrigin="0.5,0.5">
+            <TextBox.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform />
+                    <TranslateTransform/>
+                </TransformGroup>
+            </TextBox.RenderTransform>
+        </TextBox>
+        <ComboBox x:Name="cbCity" HorizontalAlignment="Left" Margin="20,179,0,0" VerticalAlignment="Top" Width="120" ItemsSource="{StaticResource TimeZoneCols}" DisplayMemberPath="CityName" SelectedValuePath="TimeZone"/>
+        <ComboBox x:Name="cbWeek" HorizontalAlignment="Left" Margin="160,179,0,0" VerticalAlignment="Top" Width="80">
+            <ComboBoxItem Content="每天" HorizontalAlignment="Center"  Width="80"/>
+            <ComboBoxItem Content="星期一" HorizontalAlignment="Center" Width="80"/>
+            <ComboBoxItem Content="星期二" HorizontalAlignment="Center" Width="80"/>
+            <ComboBoxItem Content="星期三" HorizontalAlignment="Center" Width="80"/>
+            <ComboBoxItem Content="星期四" HorizontalAlignment="Center" Width="80"/>
+            <ComboBoxItem Content="星期五" HorizontalAlignment="Center" Width="80"/>
+            <ComboBoxItem Content="星期六" HorizontalAlignment="Center" Width="80"/>
+            <ComboBoxItem Content="星期天" HorizontalAlignment="Center" Width="80"/>
+        </ComboBox>
+        <Button x:Name="btnSave" Content=" 保 存 " HorizontalAlignment="Left" Margin="440,179,0,0" VerticalAlignment="Top" Width="60" Click="btnSave_Click" />
+        <xctk:TimePicker HorizontalAlignment="Left" Margin="260,179,0,0" VerticalAlignment="Top" Width="80" RenderTransformOrigin="1,0.579" Height="25"/>
+    </Grid>
+</Controls:MetroWindow>

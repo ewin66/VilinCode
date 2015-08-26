@@ -10,7 +10,7 @@ namespace Vilin.Console
     {
         static void Main(string[] args)
         {
-            Log4netBase.Info("test");
+            Log4net.Info("test");
 
             int xx = 0;
         }
