@@ -1,0 +1,5 @@
+E:\Code\Try\VilinCode\Vilin\Services\Vilin.Caches\bin\Debug\Vilin.Caches.dll
+E:\Code\Try\VilinCode\Vilin\Services\Vilin.Caches\bin\Debug\Vilin.Caches.pdb
+E:\Code\Try\VilinCode\Vilin\Services\Vilin.Caches\obj\Debug\Vilin.Caches.csprojResolveAssemblyReference.cache
+E:\Code\Try\VilinCode\Vilin\Services\Vilin.Caches\obj\Debug\Vilin.Caches.dll
+E:\Code\Try\VilinCode\Vilin\Services\Vilin.Caches\obj\Debug\Vilin.Caches.pdb

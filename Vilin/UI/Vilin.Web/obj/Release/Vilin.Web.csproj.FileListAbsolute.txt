@@ -1,0 +1,12 @@
+E:\Code\Try\VilinCode\Vilin\UI\Vilin.Web\bin\Vilin.Web.dll
+E:\Code\Try\VilinCode\Vilin\UI\Vilin.Web\bin\Vilin.Web.pdb
+E:\Code\Try\VilinCode\Vilin\UI\Vilin.Web\bin\Vilin.Common.dll
+E:\Code\Try\VilinCode\Vilin\UI\Vilin.Web\bin\log4net.dll
+E:\Code\Try\VilinCode\Vilin\UI\Vilin.Web\bin\NPOI.dll
+E:\Code\Try\VilinCode\Vilin\UI\Vilin.Web\bin\ICSharpCode.SharpZipLib.dll
+E:\Code\Try\VilinCode\Vilin\UI\Vilin.Web\bin\Vilin.Common.pdb
+E:\Code\Try\VilinCode\Vilin\UI\Vilin.Web\bin\log4net.xml
+E:\Code\Try\VilinCode\Vilin\UI\Vilin.Web\bin\NPOI.xml
+E:\Code\Try\VilinCode\Vilin\UI\Vilin.Web\obj\Release\Vilin.Web.csprojResolveAssemblyReference.cache
+E:\Code\Try\VilinCode\Vilin\UI\Vilin.Web\obj\Release\Vilin.Web.dll
+E:\Code\Try\VilinCode\Vilin\UI\Vilin.Web\obj\Release\Vilin.Web.pdb

@@ -1,0 +1,17 @@
+﻿@model Vilin.Mvc.Models.OrderViewModel
+@{
+    ViewBag.Title = "Add";
+}
+
+<h2>Add</h2>
+@Html.ValidationSummary()
+@using (Html.BeginForm())
+{ 
+    <div>OrderCode</div>
+    <div>@Html.EditorFor(m => m.OrderCode)</div>
+           
+    <div>ProductCode</div>
+    <div>@Html.EditorFor(m => m.ProductCode)</div>
+
+    <input type="submit" value="保存" />
+}

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<configuration>
+  <ncache-server connection-retries="5" retry-connection-delay="0" retry-interval="1" client-request-timeout="90" connection-timeout="5" port="9800"/>
+  <cache id="mypartitionedcache" client-cache-id="" client-cache-syncmode="optimistic" default-readthru-provider="" default-writethru-provider="" load-balance="True">
+    <server name="Win2012B"/>
+    <server name="WIN-UNH4UQLS47D"/>
+  </cache>
+  <cache id="myreplicatedcache" client-cache-id="" client-cache-syncmode="optimistic" default-readthru-provider="" default-writethru-provider="" load-balance="True">
+    <server name="Win2012B"/>
+    <server name="WIN-UNH4UQLS47D"/>
+  </cache>
+  <cache id="mycache" client-cache-id="" client-cache-syncmode="optimistic" default-readthru-provider="" default-writethru-provider="" load-balance="True">
+    <server name="Win2012B"/>
+    <server name="WIN-UNH4UQLS47D"/>
+  </cache>
+</configuration>
