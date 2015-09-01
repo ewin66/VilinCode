@@ -252,8 +252,8 @@
     <Compile Include="ThreadQueue\ThreadQueueContainer.cs" />
     <Compile Include="ThreadQueue\ThreadQueueCore.cs" />
     <Compile Include="TimeFunc\DateTimeConvertor.cs" />
-    <Compile Include="Xml\XMLContainer.cs" />
-    <Compile Include="Xml\XMLHelper.cs" />
+    <Compile Include="Xml\XMLCacheContainer.cs" />
+    <Compile Include="Xml\XMLCacheHelper.cs" />
     <Compile Include="Xml\XmlHerlper.cs" />
   </ItemGroup>
   <ItemGroup>

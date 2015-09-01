@@ -8,7 +8,7 @@ using System.Xml.Serialization;
 
 namespace Vilin.Common
 {
-    public static class XMLHelper<T> 
+    public static class XMLCacheHelper<T> 
     {
         public static List<T> Get
         {
@@ -16,12 +16,12 @@ namespace Vilin.Common
             {
                 try
                 {
-                    if (XMLContainer.ContainsKey(Getkey))
+                    if (XMLCacheContainer.ContainsKey(Getkey))
                     {
-                        return (List<T>)XMLContainer.GetByKey(Getkey);
+                        return (List<T>)XMLCacheContainer.GetByKey(Getkey);
                     }
 
-                    string path = string.Format("~/Data/{0}.xml", Getkey);
+                    string path = string.Format("{0}Data\\{1}.xml", AppDomain.CurrentDomain.BaseDirectory, Getkey);
                     List<T> obj = LoadEntity(path);
                     if (obj != null)
                     {
@@ -45,7 +45,7 @@ namespace Vilin.Common
                 object lockObj = new object();
                 lock (lockObj)
                 {
-                    XMLContainer.Add(Getkey, obs);
+                    XMLCacheContainer.Add(Getkey, obs);
                 }
             }
             catch (Exception ex)
@@ -73,7 +73,7 @@ namespace Vilin.Common
             rootName = rootName.Replace("Model", "sModel");
 
             XmlSerializer ser = new XmlSerializer(typeof(List<T>), new XmlRootAttribute(rootName));
-            FileStream fs = File.OpenRead(System.Web.HttpContext.Current.Server.MapPath(path));
+            FileStream fs = File.OpenRead(path);
             List<T> obs = (List<T>)ser.Deserialize(fs);
             fs.Close();
 

@@ -4,29 +4,39 @@
 * 作者: 刘功勋; 
 * 版本:V0.1(C#2.0);时间:2006-12-13 
 * 
-* *******************************************************************************/ 
-using System; 
-using System.Data; 
-using System.IO; 
-using System.Xml; 
-namespace ComLib
+* *******************************************************************************/
+using System;
+using System.Data;
+using System.IO;
+using System.Text;
+using System.Xml;
+using System.Xml.Serialization;
+
+namespace Vilin.Common
 {
     /// <summary> 
     /// XML 操作基类 
     /// </summary> 
     public class XmlHerlper : IDisposable
     {
-        //以下为单一功能的静态类 
-        #region 读取XML到DataSet
-        /************************************************** 
-* 函数名称:GetXml(string XmlPath) 
-* 功能说明:读取XML到DataSet 
-* 参 数:XmlPath:xml文档路径 
-* 使用示列: 
-* using EC; //引用命名空间 
-* string xmlPath = Server.MapPath("/EBDnsConfig/DnsConfig.xml"); //获取xml路径 
-* DataSet ds = EC.XmlObject.GetXml(xmlPath); //读取xml到DataSet中 
-************************************************/
+
+        public void EntyToXMLFile()
+        {
+            //var path = AppDomain.CurrentDomain.BaseDirectory + "\\Data\\AlarmClock.xml";
+            //XmlWriterSettings settings = new XmlWriterSettings();
+            //settings.Encoding = Encoding.UTF8;
+            //settings.Indent = true;
+
+            //using (XmlWriter writer = XmlWriter.Create(path, settings))
+            //{
+            //    XmlSerializerNamespaces ns = new XmlSerializerNamespaces();
+            //    ns.Add("", "");
+            //    XmlSerializer formatter = new XmlSerializer(typeof(List<AlarmClockModel>), new XmlRootAttribute("AlarmClocksModel"));
+            //    formatter.Serialize(writer, list, ns);
+            //}
+
+        }
+
         /// <summary> 
         /// 功能:读取XML到DataSet中 
         /// </summary> 
@@ -38,22 +48,7 @@ namespace ComLib
             ds.ReadXml( @XmlPath );
             return ds;
         }
-        #endregion
 
-        #region 读取xml文档并返回一个节点
-        /************************************************** 
-* 函数名称:ReadXmlReturnNode(string XmlPath,string Node) 
-* 功能说明:读取xml文档并返回一个节点:适用于一级节点 
-* 参 数: XmlPath:xml文档路径;Node 返回的节点名称 
-* 适应用Xml:<?xml version="1.0" encoding="utf-8" ?> 
-* <root> 
-* <dns1>ns1.everdns.com</dns1> 
-* </root> 
-* 使用示列: 
-* using EC; //引用命名空间 
-* string xmlPath = Server.MapPath("/EBDnsConfig/DnsConfig.xml"); //获取xml路径 
-* Response.Write(XmlObject.ReadXmlReturnNode(xmlPath, "mailmanager")); 
-************************************************/
         /// <summary> 
         /// 读取xml文档并返回一个节点:适用于一级节点 
         /// </summary> 
@@ -73,31 +68,7 @@ namespace ComLib
              return "";
             }
         }
-        #endregion
 
-        #region 查找数据,返回一个DataSet
-        /************************************************** 
-* 函数名称:GetXmlData(string xmlPath, string XmlPathNode) 
-* 功能说明:查找数据,返回当前节点的所有下级节点,填充到一个DataSet中 
-* 参 数:xmlPath:xml文档路径;XmlPathNode:当前节点的路径 
-* 使用示列: 
-* using EC; //引用命名空间 
-* string xmlPath = Server.MapPath("/EBDomainConfig/DomainConfig.xml"); //获取xml路径 
-* DataSet ds = new DataSet(); 
-* ds = XmlObject.GetXmlData(xmlPath, "root/items");//读取当前路径 
-* this.GridView1.DataSource = ds; 
-* this.GridView1.DataBind(); 
-* ds.Clear(); 
-* ds.Dispose(); 
-* Xml示例: 
-* <?xml version="1.0" encoding="utf-8" ?> 
-* <root> 
-* <items name="xinnet"> 
-* <url>http://www.paycenter.com.cn/cgi-bin/</url> 
-* <port>80</port> 
-* </items> 
-* </root> 
-************************************************/
         /// <summary> 
         /// 查找数据,返回当前节点的所有下级节点,填充到一个DataSet中 
         /// </summary> 
@@ -113,19 +84,6 @@ namespace ComLib
             ds.ReadXml( read );
             return ds;
         }
-
-        #endregion
-
-        #region 更新Xml节点内容
-        /************************************************** 
-* 函数名称:XmlNodeReplace(string xmlPath,string Node,string Content) 
-* 功能说明:更新Xml节点内容 
-* 参 数:xmlPath:xml文档路径;Node:当前节点的路径;Content:内容 
-* 使用示列: 
-* using EC; //引用命名空间 
-* string xmlPath = Server.MapPath("/EBDomainConfig/DomainConfig.xml"); //获取xml路径 
-* XmlObject.XmlNodeReplace(xmlPath, "root/test", "56789"); //更新节点内容 
-************************************************/
         /// <summary> 
         /// 更新Xml节点内容 
         /// </summary> 
@@ -139,18 +97,7 @@ namespace ComLib
             objXmlDoc.SelectSingleNode( Node ).InnerText = Content;
             objXmlDoc.Save( xmlPath );
         }
-        #endregion
 
-        #region 删除XML节点和此节点下的子节点
-        /************************************************** 
-* 函数名称:XmlNodeDelete(string xmlPath,string Node) 
-* 功能说明:删除XML节点和此节点下的子节点 
-* 参 数:xmlPath:xml文档路径;Node:当前节点的路径; 
-* 使用示列: 
-* using EC; //引用命名空间 
-* string xmlPath = Server.MapPath("/EBDomainConfig/DomainConfig.xml"); //获取xml路径 
-* XmlObject.XmlNodeDelete(xmlPath, "root/test"); //删除当前节点 
-************************************************/
         /// <summary> 
         /// 删除XML节点和此节点下的子节点 
         /// </summary> 
@@ -164,24 +111,7 @@ namespace ComLib
             objXmlDoc.SelectSingleNode( mainNode ).RemoveChild( objXmlDoc.SelectSingleNode( Node ) );
             objXmlDoc.Save( xmlPath );
         }
-        #endregion
 
-        #region 插入一个节点和此节点的字节点
-        /************************************************** 
-* 函数名称:XmlInsertNode(string xmlPath, string MailNode, string ChildNode, string Element,string Content) 
-* 功能说明:插入一个节点和此节点的字节点 
-* 参 数:xmlPath:xml文档路径;MailNode:当前节点的路径;ChildNode:新插入的节点;Element:插入节点的子节点;Content:子节点的内容 
-* 使用示列: 
-* using EC; //引用命名空间 
-* string xmlPath = Server.MapPath("/EBDomainConfig/DomainConfig.xml"); //获取xml路径 
-* XmlObject.XmlInsertNode(xmlPath, "root/test","test1","test2","测试内容"); //插入一个节点和此节点的字节点 
-* 生成的XML格式为 
-* <test> 
-* <test1> 
-* <test2>测试内容</test2> 
-* </test1> 
-* </test> 
-************************************************/
         /// <summary> 
         /// 插入一个节点和此节点的字节点 
         /// </summary> 
@@ -217,20 +147,6 @@ namespace ComLib
             objXmlDoc.Load( xmlPath );
             XmlNode objRootNode = objXmlDoc.SelectSingleNode( MailNode );
 
-            //XmlElement objChildNode = objXmlDoc.CreateElement( ChildNode );
-            //objRootNode.AppendChild( objChildNode );
-            /************************************
-             这里XML文档出来的格式是 
-              <FromInfo>
-              <TableName></TableName>
-              <ControlName>标题</ControlName>
-              <BoundColumn>标题</BoundColumn>
-              <ControlType>text</ControlType>
-              <IsList>N</IsList>
-              <SQL></SQL>
-              </FromInfo>
-             
-             */
             
             for( int i = 0; i < ElementInfo.Rows.Count; i++ ) {
                 XmlElement ObjNextChildNode = objXmlDoc.CreateElement( "FromInfo" );
@@ -249,22 +165,6 @@ namespace ComLib
             objXmlDoc.Save( xmlPath );
         }
 
-        #endregion
-
-        #region 插入一节点,带一属性
-        /************************************************** 
-* 函数名称:XmlInsertElement(string xmlPath, string MainNode, string Element, string Attrib, string AttribContent, string Content) 
-* 功能说明:插入一节点,带一属性 
-* 参 数:xmlPath:xml文档路径;MailNode:当前节点的路径;Element:新插入的节点;Attrib:属性名称;AttribContent:属性值;Content:节点的内容 
-* 使用示列: 
-* using EC; //引用命名空间 
-* string xmlPath = Server.MapPath("/EBDomainConfig/DomainConfig.xml"); //获取xml路径 
-* XmlObject.XmlInsertElement(xmlPath, "root/test", "test1", "Attrib", "属性值", "节点内容"); //插入一节点,带一属性 
-* 生成的XML格式为 
-* <test> 
-* <test1 Attrib="属性值">节点内容</test1> 
-* </test> 
-************************************************/
         /// <summary> 
         /// 插入一节点,带一属性 
         /// </summary> 
@@ -285,22 +185,7 @@ namespace ComLib
             objNode.AppendChild( objElement );
             objXmlDoc.Save( xmlPath );
         }
-        #endregion
 
-        #region 插入一节点不带属性
-        /************************************************** 
-* 函数名称:XmlInsertElement(string xmlPath, string MainNode, string Element, string Content) 
-* 功能说明:插入一节点不带属性 
-* 参 数:xmlPath:xml文档路径;MailNode:当前节点的路径;Element:新插入的节点;Content:节点的内容 
-* 使用示列: 
-* using EC; //引用命名空间 
-* string xmlPath = Server.MapPath("/EBDomainConfig/DomainConfig.xml"); //获取xml路径 
-* XmlObject.XmlInsertElement(xmlPath, "root/test", "text1", "节点内容"); //插入一节点不带属性 
-* 生成的XML格式为 
-* <test> 
-* <text1>节点内容</text1> 
-* </test> 
-************************************************/
         public static void XmlInsertElement( string xmlPath, string MainNode, string Element, string Content )
         {
             XmlDocument objXmlDoc = new XmlDocument();
@@ -311,9 +196,6 @@ namespace ComLib
             objNode.AppendChild( objElement );
             objXmlDoc.Save( xmlPath );
         }
-
-       
-        #endregion
 
         //必须创建对象才能使用的类 
         private bool _alreadyDispose = false;

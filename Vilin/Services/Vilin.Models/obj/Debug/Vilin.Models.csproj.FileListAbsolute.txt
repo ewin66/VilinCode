@@ -11,3 +11,4 @@ E:\Code\Try\VilinCode\Vilin\Services\Vilin.Models\bin\Debug\Vilin.Models.dll
 E:\Code\Try\VilinCode\Vilin\Services\Vilin.Models\bin\Debug\Vilin.Models.pdb
 E:\Code\Try\VilinCode\Vilin\Services\Vilin.Models\obj\Debug\Vilin.Models.dll
 E:\Code\Try\VilinCode\Vilin\Services\Vilin.Models\obj\Debug\Vilin.Models.pdb
+E:\Code\Try\VilinCode\Vilin\Services\Vilin.Models\obj\Debug\Vilin.Models.csprojResolveAssemblyReference.cache

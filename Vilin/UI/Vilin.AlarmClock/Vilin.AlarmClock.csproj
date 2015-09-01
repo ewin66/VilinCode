@@ -107,6 +107,7 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="Core\AlarmClockCore.cs" />
     <Compile Include="DialogWindow.xaml.cs">
       <DependentUpon>DialogWindow.xaml</DependentUpon>
     </Compile>
@@ -120,6 +121,7 @@
     </Page>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Model\AlarmClockModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -158,7 +160,9 @@
     <Resource Include="Resources\Entypo-license.txt" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Data\TimeZone.xml" />
+    <EmbeddedResource Include="Data\TimeZone.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\..\Common\Vilin.Common\Vilin.Common.csproj">

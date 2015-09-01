@@ -24,7 +24,7 @@ namespace Vilin.AlarmClock
         public DialogWindow()
         {
             InitializeComponent();
-            labDealogContent.Content = "我是提示框";
+            labDealogContent.Content = DealogContent;
         }
     }
 }

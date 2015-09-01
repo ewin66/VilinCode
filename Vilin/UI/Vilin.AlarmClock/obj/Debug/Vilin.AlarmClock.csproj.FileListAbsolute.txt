@@ -92,4 +92,4 @@ E:\Code\Try\VilinCode\Vilin\UI\Vilin.AlarmClock\bin\Debug\System.Web.Razor.xml
 E:\Code\Try\VilinCode\Vilin\UI\Vilin.AlarmClock\bin\Debug\System.Web.WebPages.Razor.xml
 E:\Code\Try\VilinCode\Vilin\UI\Vilin.AlarmClock\bin\Debug\System.Web.WebPages.xml
 E:\Code\Try\VilinCode\Vilin\UI\Vilin.AlarmClock\bin\Debug\System.Web.WebPages.Deployment.xml
-E:\Code\Try\VilinCode\Vilin\UI\Vilin.AlarmClock\obj\Debug\GeneratedInternalTypeHelper.g.cs
+E:\Code\Try\VilinCode\Vilin\UI\Vilin.AlarmClock\bin\Debug\Data\TimeZone.xml

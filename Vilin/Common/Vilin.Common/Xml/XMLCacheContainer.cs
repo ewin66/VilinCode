@@ -5,7 +5,7 @@ using System.Web;
 
 namespace Vilin.Common
 {
-    public static class XMLContainer
+    public static class XMLCacheContainer
     {
         private static Dictionary<string, object> Dic = new Dictionary<string, object>();
 

@@ -58,3 +58,4 @@ E:\Code\Try\VilinCode\Vilin\Common\Vilin.Common\bin\Debug\System.Web.WebPages.De
 E:\Code\Try\VilinCode\Vilin\Common\Vilin.Common\bin\Debug\System.Web.WebPages.Razor.xml
 E:\Code\Try\VilinCode\Vilin\Common\Vilin.Common\obj\Debug\Vilin.Common.dll
 E:\Code\Try\VilinCode\Vilin\Common\Vilin.Common\obj\Debug\Vilin.Common.pdb
+E:\Code\Try\VilinCode\Vilin\Common\Vilin.Common\obj\Debug\Vilin.Common.csprojResolveAssemblyReference.cache
