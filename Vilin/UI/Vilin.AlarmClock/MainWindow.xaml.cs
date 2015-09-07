@@ -33,9 +33,40 @@ namespace Vilin.AlarmClock
         {
             InitializeComponent();
 
-            BandingTimeZone();
+            //BandingTimeZone();
             InitTimer();
             InitList();
+        }
+
+        private void Window_Loaded(object sender, RoutedEventArgs e)
+        {
+            this.cbCity.Focus();
+        }
+
+        /// <summary>
+        /// occurs when the user stops typing after a delayed timespan
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="args"></param>
+        protected void autoCities_PatternChanged(object sender, Vilin.AlarmClock.AutoComplete.AutoCompleteArgs args)
+        {
+            //check
+            if (string.IsNullOrEmpty(args.Pattern))
+                args.CancelBinding = true;
+            else
+                args.DataSource = MainWindow.GetCities(args.Pattern);
+        }
+
+        /// <summary>
+        /// Get a list of cities that follow a pattern
+        /// </summary>
+        /// <returns></returns>
+        private static ObservableCollection<TimeZoneModel> GetCities(string Pattern)
+        {
+            // match on contain (could do starts with)
+            return new ObservableCollection<TimeZoneModel>(
+                XMLCacheHelper<TimeZoneModel>.Get.
+                Where((city, match) => city.CityName.Contains(Pattern.ToLower())));
         }
 
         private static void OnTimedEvent(object source, ElapsedEventArgs e)
@@ -65,15 +96,18 @@ namespace Vilin.AlarmClock
             ob.TimeZone = cbCity.SelectedValue.ToString();
             ob.Week = Convert.ToInt32(cbWeek.Text);
 
+            double timeZone = 0;
             DateTime now = Convert.ToDateTime(tpTime.Value);
             if (ob.TimeZone.Contains("+"))
             {
-                now.AddHours(-8 + Convert.ToInt32(ob.TimeZone.Replace("+","")));
+                timeZone = -8 + Convert.ToDouble(ob.TimeZone.Replace("+", ""));
             }
             else
             {
-                now.AddHours(-8 - Convert.ToInt32(ob.TimeZone.Replace("-", "")));
+                timeZone = -8 - Convert.ToDouble(ob.TimeZone.Replace("-", ""));
             }
+            now = now.AddHours(timeZone * -1);
+
             ob.Time = now.ToString("HH:mm");
             ob.Remark = tbRemark.Text;
 
@@ -95,12 +129,12 @@ namespace Vilin.AlarmClock
             InitList();
         }
 
-        private void BandingTimeZone()
-        {
-            cbCity.ItemsSource = XMLCacheHelper<TimeZoneModel>.Get;
-            cbCity.DisplayMemberPath = "CityName";
-            cbCity.SelectedValuePath = "TimeZoneBak";
-        }
+        //private void BandingTimeZone()
+        //{
+        //    cbCity.ItemsSource = XMLCacheHelper<TimeZoneModel>.Get;
+        //    cbCity.DisplayMemberPath = "CityName";
+        //    cbCity.SelectedValuePath = "TimeZone";
+        //}
 
         private void InitTimer()
         {
@@ -136,18 +170,6 @@ namespace Vilin.AlarmClock
                     tbRemark.Text = ob.Remark;
 
                 }
-            }
-        }
-    }
-
-    public class TimeZoneResources : ObservableCollection<TimeZoneModel>
-    {
-        public TimeZoneResources()
-        {
-            List<TimeZoneModel> obs = XMLCacheHelper<TimeZoneModel>.Get;
-            foreach (TimeZoneModel item in obs)
-            {
-                this.Add(item);
             }
         }
     }

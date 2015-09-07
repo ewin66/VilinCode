@@ -74,7 +74,7 @@
   </TimeZoneModel>
   <TimeZoneModel>
     <CityName>缅甸</CityName>
-    <TimeZone>+6:30</TimeZone>
+    <TimeZone>+6.5</TimeZone>
     <TimeZoneBak>+9</TimeZoneBak>
     <Remark></Remark>
   </TimeZoneModel>
@@ -134,7 +134,7 @@
   </TimeZoneModel>
   <TimeZoneModel>
     <CityName>印度</CityName>
-    <TimeZone>+5:30</TimeZone>
+    <TimeZone>+5.5</TimeZone>
     <TimeZoneBak>+9</TimeZoneBak>
     <Remark></Remark>
   </TimeZoneModel>
@@ -158,7 +158,7 @@
   </TimeZoneModel>
   <TimeZoneModel>
     <CityName>斯里兰卡</CityName>
-    <TimeZone>+5:30</TimeZone>
+    <TimeZone>+5.5</TimeZone>
     <TimeZoneBak>+9</TimeZoneBak>
     <Remark></Remark>
   </TimeZoneModel>
@@ -176,7 +176,7 @@
   </TimeZoneModel>
   <TimeZoneModel>
     <CityName>阿富汗</CityName>
-    <TimeZone>+4:30</TimeZone>
+    <TimeZone>+4.5</TimeZone>
     <TimeZoneBak>+9</TimeZoneBak>
     <Remark></Remark>
   </TimeZoneModel>
@@ -236,7 +236,7 @@
   </TimeZoneModel>
   <TimeZoneModel>
     <CityName>伊朗</CityName>
-    <TimeZone>+3:30</TimeZone>
+    <TimeZone>+3.5</TimeZone>
     <TimeZoneBak>+5</TimeZoneBak>
     <Remark></Remark>
   </TimeZoneModel>
@@ -722,8 +722,8 @@
   </TimeZoneModel>
   <TimeZoneModel>
     <CityName>加拿大</CityName>
-    <TimeZone>-3:30</TimeZone>
-    <TimeZoneBak>-2:30</TimeZoneBak>
+    <TimeZone>-3.5</TimeZone>
+    <TimeZoneBak>-2.5</TimeZoneBak>
     <Remark>纽芬兰时间 (纽芬兰)</Remark>
   </TimeZoneModel>
   <TimeZoneModel>
@@ -1004,7 +1004,7 @@
   </TimeZoneModel>
   <TimeZoneModel>
     <CityName>委内瑞拉</CityName>
-    <TimeZone>-4:30</TimeZone>
+    <TimeZone>-4.5</TimeZone>
     <TimeZoneBak>-4</TimeZoneBak>
     <Remark></Remark>
   </TimeZoneModel>
@@ -1100,14 +1100,14 @@
   </TimeZoneModel>
   <TimeZoneModel>
     <CityName>澳洲</CityName>
-    <TimeZone>+9:30</TimeZone>
-    <TimeZoneBak>+10:30</TimeZoneBak>
+    <TimeZone>+9.5</TimeZone>
+    <TimeZoneBak>+10.5</TimeZoneBak>
     <Remark>中部时间 (南澳大利亚州、北领地)</Remark>
   </TimeZoneModel>
   <TimeZoneModel>
     <CityName>澳洲</CityName>
-    <TimeZone>+9:30</TimeZone>
-    <TimeZoneBak>+10:30</TimeZoneBak>
+    <TimeZone>+9.5</TimeZone>
+    <TimeZoneBak>+10.5</TimeZoneBak>
     <Remark></Remark>
   </TimeZoneModel>
   <TimeZoneModel>
@@ -1136,7 +1136,7 @@
   </TimeZoneModel>
   <TimeZoneModel>
     <CityName>科科斯群岛/基林群岛</CityName>
-    <TimeZone>+6:30</TimeZone>
+    <TimeZone>+6.5</TimeZone>
     <TimeZoneBak>+11</TimeZoneBak>
     <Remark></Remark>
   </TimeZoneModel>
@@ -1298,7 +1298,7 @@
   </TimeZoneModel>
   <TimeZoneModel>
     <CityName>法属波利尼西亚</CityName>
-    <TimeZone>-9:30</TimeZone>
+    <TimeZone>-9.5</TimeZone>
     <TimeZoneBak>+13</TimeZoneBak>
     <Remark>马克萨斯群岛</Remark>
   </TimeZoneModel>

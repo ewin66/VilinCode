@@ -7,15 +7,43 @@
         xmlns:Controls="clr-namespace:MahApps.Metro.Controls;assembly=MahApps.Metro"
         xmlns:xctk="http://schemas.xceed.com/wpf/xaml/toolkit" x:Class="Vilin.AlarmClock.MainWindow"
         mc:Ignorable="d"
-        Title="MainWindow" Height="252" Width="469.334">
-    <DockPanel>
-        <StackPanel DockPanel.Dock="Left" Orientation="Vertical">
-            <ListBox x:Name="lbList" HorizontalAlignment="Left" VerticalAlignment="Top" SelectionChanged="lbList_SelectionChanged" Height="196" />
-            <Button x:Name="btnRemove" Content=" 移 除 " Click="btnRemove_Click" HorizontalAlignment="Left" VerticalAlignment="Top" Width="120" />
-        </StackPanel>
-
-        <StackPanel DockPanel.Dock="Right" Orientation="Vertical">
-            <TextBox x:Name="tbRemark" Height="196" TextWrapping="Wrap" Text="TextBox"  Width="340" HorizontalAlignment="Right">
+        Title="MainWindow" Height="320" Width="480">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="160"/>
+            <ColumnDefinition />
+        </Grid.ColumnDefinitions>
+        <DockPanel LastChildFill="True">
+            <StackPanel DockPanel.Dock="Bottom">
+                <Button Margin="3" x:Name="btnRemove" Content=" 移 除 " Click="btnRemove_Click" VerticalAlignment="Top"/>
+            </StackPanel>
+            <ListBox Margin="3" DockPanel.Dock="Top" x:Name="lbList" HorizontalAlignment="Left" VerticalAlignment="Top" SelectionChanged="lbList_SelectionChanged" />
+        </DockPanel>
+        
+        <GridSplitter Width="1" HorizontalAlignment="Right" VerticalAlignment="Stretch" ResizeBehavior="CurrentAndNext" Margin="3,0,0,0"/>
+        
+        <DockPanel Grid.Column="1" LastChildFill="True">
+            <StackPanel Orientation="Horizontal" DockPanel.Dock="Bottom">
+                <StackPanel.Resources>
+                    <ResourceDictionary Source="/Vilin.AlarmClock;component/Styles/AutoComplete.Styles.xaml" />
+                </StackPanel.Resources>
+                <local:AutoComplete Margin="3" x:Name="cbCity" SelectedValuePath="TimeZone" DisplayMemberPath="CityName" 
+                          PatternChanged="autoCities_PatternChanged" Style="{StaticResource AutoCompleteComboBox}"
+                          Delay="500"/>
+                <ComboBox Margin="3" x:Name="cbWeek" >
+                    <ComboBoxItem Content="0" />
+                    <ComboBoxItem Content="1" />
+                    <ComboBoxItem Content="2" />
+                    <ComboBoxItem Content="3" />
+                    <ComboBoxItem Content="4" />
+                    <ComboBoxItem Content="5" />
+                    <ComboBoxItem Content="6" />
+                    <ComboBoxItem Content="7" />
+                </ComboBox>
+                <xctk:TimePicker Margin="3" Name="tpTime" />
+                <Button Margin="3" x:Name="btnSave" Content=" 保 存 " Click="btnSave_Click"  />
+            </StackPanel>
+            <TextBox Margin="3" Width="Auto" x:Name="tbRemark" TextWrapping="Wrap" Controls:TextBoxHelper.IsSpellCheckContextMenuEnabled="True">
                 <TextBox.RenderTransform>
                     <TransformGroup>
                         <ScaleTransform/>
@@ -25,21 +53,6 @@
                     </TransformGroup>
                 </TextBox.RenderTransform>
             </TextBox>
-            <StackPanel Orientation="Horizontal" DockPanel.Dock="Bottom"  Height="25" HorizontalAlignment="Right">
-                <ComboBox x:Name="cbCity"  Width="120" ItemsSource="{Binding}" />
-                <ComboBox x:Name="cbWeek"  VerticalAlignment="Bottom" Width="80">
-                    <ComboBoxItem Content="0"  HorizontalAlignment="Center"  Width="80"/>
-                    <ComboBoxItem Content="1" HorizontalAlignment="Center" Width="80"/>
-                    <ComboBoxItem Content="2" HorizontalAlignment="Center" Width="80"/>
-                    <ComboBoxItem Content="3" HorizontalAlignment="Center" Width="80"/>
-                    <ComboBoxItem Content="4" HorizontalAlignment="Center" Width="80"/>
-                    <ComboBoxItem Content="5" HorizontalAlignment="Center" Width="80"/>
-                    <ComboBoxItem Content="6" HorizontalAlignment="Center" Width="80"/>
-                    <ComboBoxItem Content="7" HorizontalAlignment="Center" Width="80"/>
-                </ComboBox>
-                <xctk:TimePicker Name="tpTime"  Width="80"/>
-                <Button x:Name="btnSave" Content=" 保 存 " Click="btnSave_Click"  Width="60" />
-            </StackPanel>
-        </StackPanel>
-    </DockPanel>
+        </DockPanel>
+    </Grid>
 </Controls:MetroWindow>
